@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="challenge.hassaan.com.challengebyhassaan.Activities.DeliveryDetailActivity">
+
+    <!-- Responsive Screen, no need to make small,large,medium or hdpi,dpi,ldpi, variations-->
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/custom_toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- making map size responsive regardless of screen size -->
+    <fragment
+        android:id="@+id/deliveryMap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/mapGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/mapGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        app:layout_constraintGuide_percent="0.7"
+        android:orientation="horizontal"
+        />
+
+    <LinearLayout
+        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/mapGuide"
+        android:layout_margin="7dp">
+
+        <ImageView
+            android:id="@+id/imgDelivery"
+            android:layout_width="100dp"
+            android:layout_height="99dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/id_delivery_image" />
+
+        <TextView
+            android:id="@+id/textDeliveryDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="18sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_margin="5dp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@android:color/black"/>
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

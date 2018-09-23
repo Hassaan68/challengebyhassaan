@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ChallengeByHassaan</string>
+    
+    <string name="id_things_to_deliver">Things To Deliver</string>
+    <string name="id_delivery_etails">Delivery Details</string>
+
+    <string name="id_nothing_to_deliver">Nothing To Deliver</string>
+    <string name="id_delivery_image">Delivery Image</string>
+
+    <string name="id_loading">Loading </string>
+
+    <string name="maps_api_key">AIzaSyAeTHp-vNEQNFsv7KV6vGn8V1MiyqTSgUA</string>
+</resources>
